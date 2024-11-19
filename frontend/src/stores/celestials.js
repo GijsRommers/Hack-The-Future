@@ -1,10 +1,9 @@
-// stores/celestials.js
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import axios from 'axios'
 
 export const useCelestialsStore = defineStore('Celestials', () => {
-    const favorites = ref([]) // Initialize as empty array
+    const favorites = ref([]) 
 
     async function getCelestials() {
         try {
@@ -17,12 +16,12 @@ export const useCelestialsStore = defineStore('Celestials', () => {
     }
 
     function isInFavorites(id) {
-        if (!favorites.value) favorites.value = [] // Ensure favorites is initialized
+        if (!favorites.value) favorites.value = [] 
         return favorites.value.includes(id)
     }
 
     function toggleFavorite(id) {
-        if (!favorites.value) favorites.value = [] // Ensure favorites is initialized
+        if (!favorites.value) favorites.value = []
         const index = favorites.value.indexOf(id)
         if (index === -1) {
             favorites.value.push(id)

@@ -2,7 +2,6 @@
     <div class="home">
       <div id="panorama"></div>
     </div>
-    <div class="cursor">Hallo allemaal</div>
 </template>
     
 <script setup>
@@ -12,7 +11,30 @@ onMounted(() => {
   window.pannellum.viewer('panorama', {
     type: 'equirectangular',
     panorama: '/images/360.png',
-    autoLoad: true
+    autoLoad: true,
+    showControls: false,
+    "hotSpots": [
+        {
+            "pitch": 14.1, //naar boven of onder
+            "yaw": 23,  //naar links of rechts
+            "type": "info",
+            "text": "Baltimore Museum of Art",
+            "URL": "https://artbma.org/"
+        },
+        {
+            "pitch": 14.1,
+            "yaw": 222.6,
+            "type": "info",
+            "text": "Art Museum Drive"
+        },
+        {
+            "pitch": 14.1,
+            "yaw": 144.4,
+            "type": "info",
+            "text": "North Charles Street"
+        }
+    ]
+
   })
 })
 </script>
@@ -20,10 +42,9 @@ onMounted(() => {
   
 <style scoped>
   #panorama {
-    width: 100%;
-    height: 500px;
+    min-width: 100vw;
+    min-height: 100vh;
   }
-  #cursor {
-    cursor: url(/cursor.png);
-  }
+
+  
 </style>

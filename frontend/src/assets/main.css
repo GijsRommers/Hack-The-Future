@@ -1,7 +1,18 @@
-body {
-  cursor: url(/cursor.png), auto !important;
+* {
+  margin: 0;
 }
 
-body {
-  margin: 0;
+body, html {
+  cursor: url('/cursor.png'), auto !important;
+  -webkit-cursor: url('/cursor.png'), auto !important;
+  -moz-cursor: url('/cursor.png'), auto !important;
+  -ms-cursor: url('/cursor.png'), auto !important;
+}
+
+/* Ensure cursor works on all interactive elements */
+a, button, input[type="submit"], select, input[type="button"] {
+  cursor: url('/cursor.png'), pointer !important;
+  -webkit-cursor: url('/cursor.png'), pointer !important;
+  -moz-cursor: url('/cursor.png'), pointer !important;
+  -ms-cursor: url('/cursor.png'), pointer !important;
 }

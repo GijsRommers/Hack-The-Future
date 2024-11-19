@@ -55,12 +55,15 @@ function hotspot(hotSpotDiv, args) {
   }
 
   .custom-hotspot {
-        height: 50px;
-        width: 50px;
-        background-image: url("/images/planeten/planeet1.png");
-    }
+    height: 50px;
+    width: 50px;
+    background-image: url('/images/planeten/planeet1.png'); /* Fix path */
+    background-size: contain; /* Add sizing */
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
-    custom-tooltip:hover span:after {
+    .custom-tooltip:hover span:after {
         content: '';
         position: absolute;
         width: 0;

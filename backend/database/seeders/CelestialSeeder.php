@@ -13,7 +13,7 @@ class CelestialSeeder extends Seeder
             'name' => 'Earth',
             'type' => 'Planet',
             'description' => 'Our home planet.',
-            'image' => 'earth.jpg',
+            'image' => 'planeet1.png',
             'pitch' => 0.0,
             'yaw' => 0.0,
         ]);
@@ -22,7 +22,7 @@ class CelestialSeeder extends Seeder
             'name' => 'Sun',
             'type' => 'Star',
             'description' => 'The star at the center of our solar system.',
-            'image' => 'sun.jpg',
+            'image' => 'planeet2.png',
             'pitch' => 0.0,
             'yaw' => 0.0,
         ]);
@@ -31,7 +31,7 @@ class CelestialSeeder extends Seeder
             'name' => 'Moon',
             'type' => 'Moon',
             'description' => 'Earth\'s only natural satellite.',
-            'image' => 'moon.jpg',
+            'image' => 'planeet3.png',
             'pitch' => 0.0,
             'yaw' => 0.0,
         ]);

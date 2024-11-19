@@ -15,36 +15,71 @@ onMounted(() => {
     showControls: false,
     "hotSpots": [
         {
-            "pitch": 14.1, //naar boven of onder
-            "yaw": 23,  //naar links of rechts
-            "type": "info",
-            "text": "Baltimore Museum of Art",
+            "pitch": 15, 
+            "yaw": 223,  
+            "cssClass": "custom-hotspot",
+            "createTooltipFunc": hotspot,
+            "createTooltipArgs": "North Charles Street",
             "URL": "https://artbma.org/"
         },
         {
-            "pitch": 14.1,
-            "yaw": 222.6,
-            "type": "info",
-            "text": "Art Museum Drive"
-        },
-        {
-            "pitch": 14.1,
+            "pitch": 10,
             "yaw": 144.4,
-            "type": "info",
-            "text": "North Charles Street"
+            "cssClass": "custom-hotspot",
+            "createTooltipFunc": hotspot,
+            "createTooltipArgs": "North Charles Street"
         }
     ]
 
   })
 })
+
+
+function hotspot(hotSpotDiv, args) {
+    console.log("hello");
+    hotSpotDiv.classList.add('custom-tooltip');
+    var span = document.createElement('span');
+    span.innerHTML = args;
+    hotSpotDiv.appendChild(span);
+    span.style.width = span.scrollWidth - 20 + 'px';
+    span.style.marginLeft = -(span.scrollWidth - hotSpotDiv.offsetWidth) / 2 + 'px';
+    span.style.marginTop = -span.scrollHeight - 12 + 'px';
+}
 </script>
 
   
-<style scoped>
+<style>
   #panorama {
     min-width: 100vw;
     min-height: 100vh;
   }
+
+  .custom-hotspot {
+        height: 50px;
+        width: 50px;
+        background: url("/images/planeten/planeet1.png");
+    }
+
+    .custom-tooltip {
+        background: url("/images/planeten/planeet1.png");
+
+    }
+
+    custom-tooltip:hover span{
+        visibility: visible;
+    }
+    custom-tooltip:hover span:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-width: 10px;
+        border-style: solid;
+        border-color: #fff transparent transparent transparent;
+        bottom: -20px;
+        left: -10px;
+        margin: 0 50%;
+    }
 
   
 </style>

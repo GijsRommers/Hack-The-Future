@@ -16,6 +16,7 @@ class CreateCelestialsTable extends Migration
             $table->string('image')->nullable();
             $table->float('pitch')->nullable();
             $table->float('yaw')->nullable();
+            $table->integer('size')->nullable();
             $table->timestamps();
         });
     }

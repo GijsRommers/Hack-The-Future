@@ -16,5 +16,18 @@ class Celestial extends Model
         'image',
         'pitch',
         'yaw',
+        'size'
     ];
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($celestial) {
+            $celestial->pitch = mt_rand(0,90);
+            $celestial->yaw = mt_rand(-180, 180);
+            $celestial->size = mt_rand(5, 55);
+            $celestial->image = 'planeet' . mt_rand(1, 15) . '.png';
+        });
+    }
+
 }

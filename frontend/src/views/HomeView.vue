@@ -57,17 +57,9 @@ function hotspot(hotSpotDiv, args) {
   .custom-hotspot {
         height: 50px;
         width: 50px;
-        background: url("/images/planeten/planeet1.png");
+        background-image: url("/images/planeten/planeet1.png");
     }
 
-    .custom-tooltip {
-        background: url("/images/planeten/planeet1.png");
-
-    }
-
-    custom-tooltip:hover span{
-        visibility: visible;
-    }
     custom-tooltip:hover span:after {
         content: '';
         position: absolute;

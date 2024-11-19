@@ -57,8 +57,8 @@ function hotspot(hotSpotDiv, args) {
   .custom-hotspot {
     height: 50px;
     width: 50px;
-    background-image: url('/images/planeten/planeet1.png'); /* Fix path */
-    background-size: contain; /* Add sizing */
+    background-image: url('/images/planeten/planeet1.png'); 
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
   }
